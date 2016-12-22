@@ -8,7 +8,7 @@
     $this->beli =$b;
     $this->jual =$j;
     }
-    function pembagian()
+    function jualbeli()
     {
         return $this->beli * $this->jual;
     }
@@ -18,15 +18,15 @@ $mau_beli = new Al_quran(20,5);
 $mau_jual = clone $mau_beli;
 
 echo "Hasil sebelum properti beli: <br/><br/>";
-echo "Harga beli dari <i><b>AL-QUR'AN</i></b> = ".$mau_beli->pembagian()."<br/>";
-echo "Harga jual dari <i><b>AL-QUR'AN</i></b> = ".$mau_jual->pembagian()."<br/>
+echo "Harga beli dari <i><b>AL-QUR'AN</i></b> = ".$mau_beli->jualbeli()."<br/>";
+echo "Harga jual dari <i><b>AL-QUR'AN</i></b> = ".$mau_jual->jualbeli()."<br/>
 <br/>";
 
 $mau_jual->beli=10;
 
 echo "Hasil setelah properti beli pada mau_jual diganti 10 : <br/><br/>";
-echo "Harga beli dari <i><b>AL-QUR'AN</i></b> = ".$mau_beli->pembagian()."<br/>";
-echo "Harga jual dari <i><b>AL-QUR'AN</i></b> = ".$mau_jual->pembagian()."<br/>";
+echo "Harga beli dari <i><b>AL-QUR'AN</i></b> = ".$mau_beli->jualbeli()."<br/>";
+echo "Harga jual dari <i><b>AL-QUR'AN</i></b> = ".$mau_jual->jualbeli()."<br/>";
 
 // NOTE : Hasil yang diperoleh dari mau_beli dan mau_jual setelah mengganti
 //properti terlihat berbeda. Hal ini karena mau_jual merupakan object baru hasil
